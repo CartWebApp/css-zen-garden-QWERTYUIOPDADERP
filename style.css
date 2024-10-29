@@ -1,1 +1,26 @@
-/* Empty file for template. Remember to edit only this file and not the HTML file */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: column wrap;
+    width:70%;
+}
+
+aside{
+    position: fixed;
+    align-self: flex-end;
+    right:0;
+    top:0;
+    width:30%;
+}
+
+.supporting, .intro, .sidebar{
+    margin: 20px;
+}
+
+.sidebar{
+    padding: 20px;
+}
