@@ -1,3 +1,16 @@
+:root {
+    --sidebarBackgroundColor: #DFD8CA;
+    --goldTrim: #D2A63C;
+    --background: rgb(60 54 50 / .9);
+    --mainTextColor: #F3F3E6;
+    --headerColor: #EEC95C;
+    --sideTextColor: #3C3632;
+    --sideHeaderColor: #564D42;
+    --darkStroke: #564D42;
+    --lightStroke: #EECD5C;
+    --boxBackgroundColor: #5F574E;
+}
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -6,7 +19,10 @@
 body{
     display: flex;
     flex-flow: column wrap;
-    width:70%;
+    width:75%;
+    background-color: black;
+    background-image: url(images/silverswirls.png);
+    object-fit:contain;
 }
 
 aside{
@@ -14,13 +30,72 @@ aside{
     align-self: flex-end;
     right:0;
     top:0;
-    width:30%;
+    width: 25%;
+    margin-top: 5vh;
 }
 
 .supporting, .intro, .sidebar{
-    margin: 20px;
 }
 
-.sidebar{
-    padding: 20px;
+.main, .intro{
+    padding: 25px;
+    margin: 0 25px;
+}
+
+.sidebar .wrapper div{
+    background-color: var(--sidebarBackgroundColor);
+    border-style: solid;
+    border-color: var(--goldTrim);
+    border-radius: 10px;
+    border-width: 2px;
+    margin: 2vh 10px;
+    padding: 10px;
+}
+
+header[role="banner"]{
+    margin-bottom: 2vh;
+    background-color: #D2A63C;
+}
+
+.main.supporting, .intro{
+    background-color: var(--background);
+    opacity: 0.9;
+    padding: 10px;
+}
+
+.main:only-of-type{
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 5vh;
+    padding-top:0;
+    margin-top:-4vh;
+}
+
+div > p{
+    font-size: 1.8vh;
+    color: var(--mainTextColor);
+
+}
+
+.main h3, .intro h3{
+    font-size: 3vh;
+    color: var(--headerColor);
+}
+
+aside h3{
+    color: var(--sideHeaderColor);
+}
+
+aside p{
+    color: var(--sideTextColor);
+}
+
+.page-wrapper{
+    margin-top: 5vh;
+}
+
+[role~="article"]{
+  margin: 4vh;
+  background-color: var(--boxBackgroundColor); 
+  border-radius: 10px;
+  padding: 20px;
 }
