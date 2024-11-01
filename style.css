@@ -21,20 +21,26 @@ body{
     flex-flow: column wrap;
     width:75%;
     background-color: black;
-    background-image: url(images/silverswirls.png);
-    object-fit:contain;
+    background-image: url(images/goldswirl.png);
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
 }
 
-aside{
+
+.page-wrapper{
+    margin-top: 5vh;
+}
+
+aside.sidebar{
     position: fixed;
     align-self: flex-end;
     right:0;
     top:0;
     width: 25%;
     margin-top: 5vh;
-}
-
-.supporting, .intro, .sidebar{
 }
 
 .main, .intro{
@@ -59,7 +65,7 @@ header[role="banner"]{
 
 .main.supporting, .intro{
     background-color: var(--background);
-    opacity: 0.9;
+    opacity: 0.99;
     padding: 10px;
 }
 
@@ -89,13 +95,84 @@ aside p{
     color: var(--sideTextColor);
 }
 
-.page-wrapper{
-    margin-top: 5vh;
-}
 
 [role~="article"]{
   margin: 4vh;
   background-color: var(--boxBackgroundColor); 
   border-radius: 10px;
   padding: 20px;
+}
+
+section header{
+    margin: 4vh;
+    border-radius: 10px;
+}
+
+#zen-summary::before{
+    font-size: 3vh;
+    color: var(--headerColor);
+    font-weight: bold;
+    content: "Beginning the Path";
+}
+div+footer{
+    background-color: var(--boxBackgroundColor);
+    padding: 5px;
+    margin: 0 4vh 2vh;
+    border-radius: 5px;
+}
+
+h1~h2{
+    color: black;
+}
+
+h2 abbr[title]{
+    color: black;
+}
+
+a::selection{
+    color: tomato;
+}
+
+a:visited{
+    color: rgb(227, 113, 46);
+}
+
+a:link{
+    color:burlywood
+}
+
+li a:visited{
+    color: brown;
+}
+
+li a:link{
+    color: rgb(162, 110, 13);
+}
+
+li a::selection{
+    color:#634531;
+}
+
+[id|="zen"]{
+    padding-bottom: 25px;
+}
+
+[title]{
+    color:lightblue;
+}
+
+li [title]{
+    color: darkblue;
+}
+
+[role^="ban"]{
+    padding: 15px;
+}
+
+h1:first-child{
+    font-size: 5vh;
+}
+
+h2:last-child{
+    font-size: 3.5vh;
 }
