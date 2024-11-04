@@ -87,7 +87,7 @@ div > p{
     color: var(--headerColor);
 }
 
-aside h3{
+aside h3::first-line{
     color: var(--sideHeaderColor);
 }
 
@@ -103,7 +103,7 @@ aside p{
   padding: 20px;
 }
 
-section header{
+section header[role$="er"]{
     margin: 4vh;
     border-radius: 10px;
 }
@@ -157,7 +157,7 @@ li a::selection{
     padding-bottom: 25px;
 }
 
-[title]{
+[title]:not(a){
     color:lightblue;
 }
 
@@ -169,10 +169,47 @@ li [title]{
     padding: 15px;
 }
 
-h1:first-child{
+h1{
     font-size: 5vh;
 }
 
 h2:last-child{
     font-size: 3.5vh;
+}
+
+ul:only-child{
+    color:black;
+}
+
+a:hover, a:focus{
+    font-weight: bold;
+}
+
+p:first-of-type::first-letter{
+    font-size: 3.5vh;
+    color: silver;
+    margin: 5px;
+}
+
+a:active{
+    color:black;
+}
+
+li:nth-last-child(1){
+    margin-bottom: 1vh;
+}
+
+div:empty:last-of-type{
+    margin: 2vh;
+}
+
+[class*="fit"]:nth-child(3):after{
+    font-size: 1.8vh;
+    color: var(--mainTextColor);
+    content: "By contributing, you become part of a vibrant community of web enthusiasts and professionals who are passionate about pushing the boundaries of what’s possible with CSS. Your work not only showcases your skills and creativity but also helps to elevate the standards of web design and development.";
+}
+
+.summary p:nth-of-type(2)::first-line{
+    font-weight: bolder;
+    color: lightsteelblue;
 }
